@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hbb-ZC-XxD">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="BubbleWarV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="map_selection_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xSG-Yx-Cn4">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvV-Za-HvV">
+                                <rect key="frame" x="224" y="122" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Forest Map">
+                                    <color key="titleColor" red="0.0024272955377904371" green="0.0004283084432453525" blue="0.0043414290450928261" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forestPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="eE9-to-VQH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no3-gw-cMJ">
+                                <rect key="frame" x="217" y="189" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Mine Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="minePressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="VFK-tA-rp8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-oW-GKh">
+                                <rect key="frame" x="515" y="121" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Camp Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="campPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ooV-Wz-yDS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zg-gl-H5N">
+                                <rect key="frame" x="532" y="188" width="166" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Cemetery Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cemeteryPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fpV-DC-Khw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwr-nR-xPG">
+                                <rect key="frame" x="208" y="253" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Sea Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="seaPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gWn-Wo-hd7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="obstacle2" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-Ab-ufB">
+                                <rect key="frame" x="171" y="121" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="mine_obstacle4" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-xX-HLu">
+                                <rect key="frame" x="171" y="190" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="sea1" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-dA-1uB">
+                                <rect key="frame" x="173" y="254" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XS-Xw-VBX">
+                                <rect key="frame" x="203" y="20" width="407" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjs-ab-gvv">
+                                <rect key="frame" x="503" y="250" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <state key="normal" title="Ice Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="icePressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gS4-Rg-e6s"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="camp_block1" translatesAutoresizingMaskIntoConstraints="NO" id="6mP-T6-fEi">
+                                <rect key="frame" x="474" y="124" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="cemetery_obstacle_4" translatesAutoresizingMaskIntoConstraints="NO" id="c0S-av-Q4K">
+                                <rect key="frame" x="478" y="180" width="40" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ice_tile" translatesAutoresizingMaskIntoConstraints="NO" id="X91-LT-8x5">
+                                <rect key="frame" x="473" y="250" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xSG-Yx-Cn4" secondAttribute="bottom" id="D2x-aT-Isk"/>
+                            <constraint firstItem="xSG-Yx-Cn4" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="Rld-EF-Uya"/>
+                            <constraint firstItem="xSG-Yx-Cn4" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="dXe-XI-Cp2"/>
+                            <constraint firstAttribute="trailing" secondItem="xSG-Yx-Cn4" secondAttribute="trailing" id="wi6-Tp-eb7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <connections>
+                        <outlet property="camp" destination="zHf-oW-GKh" id="NW5-o3-FjL"/>
+                        <outlet property="cemetery" destination="0Zg-gl-H5N" id="Ut4-Rq-Y92"/>
+                        <outlet property="forest" destination="uvV-Za-HvV" id="Y13-zU-q5e"/>
+                        <outlet property="ice" destination="mjs-ab-gvv" id="UzE-IN-viJ"/>
+                        <outlet property="map_selection_bg" destination="xSG-Yx-Cn4" id="NtM-hh-SOO"/>
+                        <outlet property="mine" destination="no3-gw-cMJ" id="2kX-w2-Tzu"/>
+                        <outlet property="picCamp" destination="6mP-T6-fEi" id="p3e-oB-qbM"/>
+                        <outlet property="picCemetery" destination="c0S-av-Q4K" id="9dV-qP-gAa"/>
+                        <outlet property="picForest" destination="Hnc-Ab-ufB" id="x5o-0F-if5"/>
+                        <outlet property="picIce" destination="X91-LT-8x5" id="Wrs-hc-NCz"/>
+                        <outlet property="picMine" destination="Hqf-xX-HLu" id="Rsi-uX-UAZ"/>
+                        <outlet property="picSea" destination="Xfm-dA-1uB" id="T7z-dP-ank"/>
+                        <outlet property="sea" destination="hwr-nR-xPG" id="8f4-sa-Rdj"/>
+                        <outlet property="titleLabel" destination="0XS-Xw-VBX" id="1CC-Wg-bql"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277.23214285714283" y="540.57971014492762"/>
+        </scene>
+        <!--Helper View Controller-->
+        <scene sceneID="MNR-mv-5Ai">
+            <objects>
+                <viewController id="82P-bL-Sq9" customClass="HelperViewController" customModule="BubbleWarV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T56-qy-uKE">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3z-7g-U00">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-MP-cXk">
+                                        <rect key="frame" x="0.0" y="33" width="812" height="779"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bubble_add" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-P0-8If">
+                                                <rect key="frame" x="43" y="254" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="fast" translatesAutoresizingMaskIntoConstraints="NO" id="uDe-Kg-ecL">
+                                                <rect key="frame" x="43" y="297" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="power" translatesAutoresizingMaskIntoConstraints="NO" id="LtP-wg-06e">
+                                                <rect key="frame" x="43" y="514" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Alp-Ry-j8S">
+                                                <rect key="frame" x="43" y="211" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bubble that you and your enemy can deploy. It will balst after 2 seconds." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k9-4w-OQZ">
+                                                <rect key="frame" x="86" y="220" width="552" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An item that can incrase the max number of bubble that you can deploy at same time. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRl-Cd-nuN">
+                                                <rect key="frame" x="86" y="263" width="657" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An item that can increase the movement speed of character." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDg-Oo-ncw">
+                                                <rect key="frame" x="86" y="306" width="461" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blocks that you can destroy. Items might appear after the block destoryed." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFp-vv-yBP">
+                                                <rect key="frame" x="86" y="349" width="569" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An item that can increase the range of damage of your bubble." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1p-d1-56v">
+                                                <rect key="frame" x="86" y="521" width="478" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An item which enables player to deploy fire bubble once." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noj-Ep-KSS">
+                                                <rect key="frame" x="86" y="431" width="521" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fire bubble which can cause double damage to the game characters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-C9-hLp">
+                                                <rect key="frame" x="86" y="480" width="527" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mode introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-hZ-E6z">
+                                                <rect key="frame" x="33" y="0.0" width="188" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Regular Mode: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-IA-UOW">
+                                                <rect key="frame" x="43" y="42" width="118" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soccer Mode:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjG-8e-GEN">
+                                                <rect key="frame" x="43" y="103" width="118" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can deploy bubbles. Bubbles can destroy blocks, items and your enemy. Destroy your enemy and win the game!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-sh-er3">
+                                                <rect key="frame" x="169" y="36" width="611" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7f-qp-J6z">
+                                                <rect key="frame" x="169" y="96" width="600" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">You will not be able to deploy bubbles. Bubbles will be randomly generated on the map. You will be able to kick bubbles. Kick bubbles to your enemy and trick them!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-q8-3YQ">
+                                                <rect key="frame" x="33" y="162" width="188" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="block1" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-Kn-0yg">
+                                                <rect key="frame" x="43" y="342" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="fire" translatesAutoresizingMaskIntoConstraints="NO" id="638-Cg-tQg">
+                                                <rect key="frame" x="43" y="428" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="fire_bubble_1" translatesAutoresizingMaskIntoConstraints="NO" id="Dnj-RK-wge">
+                                                <rect key="frame" x="43" y="471" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="obstacle1" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-9S-27T">
+                                                <rect key="frame" x="42" y="385" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Obstacles which are neither accessible by the players nor destructible by the bubbles." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzv-YT-xGw">
+                                                <rect key="frame" x="85" y="392" width="658" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="shield" translatesAutoresizingMaskIntoConstraints="NO" id="lbs-G0-ujx">
+                                                <rect key="frame" x="43" y="557" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An item that can protect you from receiving upcoming damage for one time." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ld-YG-bdf">
+                                                <rect key="frame" x="84" y="566" width="579" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The player character." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9W-I4-Nqw">
+                                                <rect key="frame" x="84" y="609" width="162" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The enemy character." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdL-jK-hvU">
+                                                <rect key="frame" x="84" y="652" width="167" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="player_down" translatesAutoresizingMaskIntoConstraints="NO" id="StE-dQ-iJW">
+                                                <rect key="frame" x="43" y="600" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="robot_down" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-2N-REn">
+                                                <rect key="frame" x="43" y="645" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="779" id="EbJ-HR-Vyg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7Bd-MP-cXk" secondAttribute="trailing" id="X8E-lb-ue7"/>
+                                    <constraint firstItem="7Bd-MP-cXk" firstAttribute="top" secondItem="c3z-7g-U00" secondAttribute="top" constant="33" id="ZSH-hb-sWL"/>
+                                    <constraint firstItem="7Bd-MP-cXk" firstAttribute="leading" secondItem="c3z-7g-U00" secondAttribute="leading" id="oFr-Ny-LV1"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Bd-MP-cXk" secondAttribute="bottom" id="vuS-7O-Mrc"/>
+                                </constraints>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-6A-fa7">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Game Helper" id="YAR-xM-236">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="UFc-jN-Jw9">
+                                            <connections>
+                                                <action selector="back:" destination="82P-bL-Sq9" id="Eg8-g2-G2l"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="c3z-7g-U00" secondAttribute="trailing" id="Em7-do-6wk"/>
+                            <constraint firstItem="c3z-7g-U00" firstAttribute="top" secondItem="e9x-D2-6Qu" secondAttribute="top" id="Sge-lp-CeH"/>
+                            <constraint firstItem="7Bd-MP-cXk" firstAttribute="width" secondItem="T56-qy-uKE" secondAttribute="width" id="lp8-pM-XHE"/>
+                            <constraint firstItem="c3z-7g-U00" firstAttribute="leading" secondItem="T56-qy-uKE" secondAttribute="leading" id="qy3-3D-tg5"/>
+                            <constraint firstAttribute="bottom" secondItem="c3z-7g-U00" secondAttribute="bottom" id="zlE-NN-y3I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e9x-D2-6Qu"/>
+                    </view>
+                    <size key="freeformSize" width="812" height="812"/>
+                    <connections>
+                        <outlet property="myView" destination="7Bd-MP-cXk" id="dlI-Eb-mYj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jco-Pe-Rw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.600985221674879" y="1892.8"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="YtQ-40-EnT">
+            <objects>
+                <viewController id="Hbb-ZC-XxD" customClass="MenuViewController" customModule="BubbleWarV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="56b-5K-7dh" customClass="Menu">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="main_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xnS-Ax-78p">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1SN-Qk-5YD">
+                                <rect key="frame" x="133" y="-31" width="546" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-TZ-Z7Z">
+                                <rect key="frame" x="339" y="231" width="203" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Soccer Mode" image="soccer_icon"/>
+                                <connections>
+                                    <segue destination="pmw-ga-s4h" kind="presentation" identifier="soccerGame" id="v3Q-Fx-Ztk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk8-9n-Fy2">
+                                <rect key="frame" x="89" y="228" width="203" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regular Mode" image="regular_icon"/>
+                                <connections>
+                                    <action selector="regularPressed:" destination="Hbb-ZC-XxD" eventType="touchUpInside" id="0pU-N9-0cJ"/>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" identifier="regularGame" id="cfb-uo-da6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4b-xU-OFv">
+                                <rect key="frame" x="420" y="123" width="132" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Game Helper" image="help"/>
+                                <connections>
+                                    <segue destination="82P-bL-Sq9" kind="presentation" id="bwd-PY-78m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VtO-Iy-gr3"/>
+                    </view>
+                    <connections>
+                        <outlet property="regularButton" destination="yk8-9n-Fy2" id="zcL-lA-4ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kF9-Yj-Ehb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263.79310344827587" y="-420"/>
+        </scene>
+        <!--Soccer View Controller-->
+        <scene sceneID="Qw5-c4-8db">
+            <objects>
+                <viewController id="pmw-ga-s4h" customClass="SoccerViewController" customModule="BubbleWarV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnD-V1-4m6" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CyR-wt-Bz1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYl-ID-RQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="540"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="block1" width="40" height="48"/>
+        <image name="bubble" width="300" height="300"/>
+        <image name="bubble_add" width="38" height="38"/>
+        <image name="camp_block1" width="40" height="46"/>
+        <image name="cemetery_obstacle_4" width="40" height="56"/>
+        <image name="fast" width="38" height="38"/>
+        <image name="fire" width="100" height="100"/>
+        <image name="fire_bubble_1" width="50" height="50"/>
+        <image name="help" width="1024" height="768"/>
+        <image name="ice_tile" width="40" height="40"/>
+        <image name="logo" width="600" height="201"/>
+        <image name="main_bg" width="3462" height="1600"/>
+        <image name="map_selection_bg" width="1280" height="591"/>
+        <image name="mine_obstacle4" width="39" height="52"/>
+        <image name="obstacle1" width="72" height="74"/>
+        <image name="obstacle2" width="305" height="305"/>
+        <image name="player_down" width="70" height="70"/>
+        <image name="power" width="38" height="38"/>
+        <image name="regular_icon" width="600" height="233"/>
+        <image name="robot_down" width="70" height="70"/>
+        <image name="sea1" width="40" height="40"/>
+        <image name="shield" width="38" height="38"/>
+        <image name="soccer_icon" width="600" height="233"/>
+    </resources>
+</document>
